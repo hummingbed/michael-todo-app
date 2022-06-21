@@ -12,7 +12,7 @@ class ToDoApp extends React.Component {
 
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
-        // this.handleDelete = this.handleDelete.bind(this);
+        this.handleDelete = this.handleDelete.bind(this);
     }
 
     handleChange(event) {
@@ -21,13 +21,17 @@ class ToDoApp extends React.Component {
         });
     }
 
-    handleDelete(event) {
-        
-        // this.setState({
-        //     todo: this.state.todo.reset()
-        // });
-    }
+    handleDelete() {
+        this.setState({
+            todo: []
+        });
 
+        this.setState({
+            done: []
+        });
+      
+    }
+    
     handleSubmit(event) {
         event.preventDefault();
         if (this.state.input !== '') {
@@ -54,8 +58,6 @@ class ToDoApp extends React.Component {
             done: this.state.done.concat(this.state.todo[index]),
             todo: this.state.todo.filter((item, key) => key !== index)
         });
-
-        
     };
 
     deleteToDoItem = (index) => {
@@ -79,7 +81,6 @@ class ToDoApp extends React.Component {
                     <div className="todo-heading-circle">
                         <i className="fas fa-check"></i>
                     </div>
-                    <h1 className="text-center">To Do List</h1>
                 </div>
 
                 <div className="todo-add">
@@ -93,13 +94,16 @@ class ToDoApp extends React.Component {
                     <div className="todo-list-container">
                         <h5 className="todo-subheading">
                             New Todo's &nbsp;
+                            
                             <span className="todo-percent">
                                 {'' + (this.state.todo.length + this.state.done.length > 0 ? Math.round((this.state.todo.length / (this.state.todo.length + this.state.done.length) * 100) * 100) / 100 : 0) + '%'}
                             </span>
                         </h5>
                         <ToDoItems id="todo-list-todo" items={this.state.todo} toggleDone={this.doItem} delete={this.deleteToDoItem}/>
                     </div>
-                    <hr></hr>
+
+                    <hr/>
+
                     <div className="todo-list-container">
                         <h5 className="todo-subheading">
                             Completed Todo's: &nbsp;
