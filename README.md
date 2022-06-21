@@ -15,11 +15,11 @@ In the project directory, you can run:
 
 
 Packages used
-### `Bootstrap`
+## `Bootstrap`
 
 
 
-### `Intsructions`
+## `Intsructions`
 
 click on the output text (todo's) to either complete or uncomplete the todo's.
 
