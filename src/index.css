@@ -73,3 +73,13 @@ body {
   color: red;
   float: right;
 }
+
+.todo-list-done{
+  font-size: 100%;
+  color: red;
+}
+
+.list-group:last-child{
+  display: flex;
+  flex-direction: column-reverse;
+}

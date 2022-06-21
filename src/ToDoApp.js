@@ -107,7 +107,7 @@ class ToDoApp extends React.Component {
                                 {'' + (this.state.todo.length + this.state.done.length > 0 ? Math.round((this.state.done.length / (this.state.todo.length + this.state.done.length) * 100) * 100) / 100 : 0) + '%'}
                             </span>
                         </h5>
-                        <ToDoItems id="todo-list-done" items={this.state.done} toggleDone={this.undoItem} delete={this.deleteDoneItem}/>
+                        <ToDoItems id="todo-list-done"  items={this.state.done} toggleDone={this.undoItem} delete={this.deleteDoneItem}/>
                     </div>
                 </div>
             </div>
