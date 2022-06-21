@@ -1,13 +1,75 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300');
+
+:root {
+  --col-0: #61dafb;
+  --col-1: #282c34;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h1 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+}
+
+textarea {
+  resize: none;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  background-image: linear-gradient(-225deg, #9EFBD3 0%, #57E9F2 48%, #45D4FB 100%);
+  padding: 50px 0;
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+}
+
+#main {
+  background: #F4F6F9;
+  width: 80%;
+  border-radius: 4px;
+  box-sizing: border-box;
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  box-shadow:
+    2px 4px 10px hsla(0, 0%, 0%, .3),
+    2px 4px 20px hsla(0, 0%, 0%, .2)
+  ;
+}
+
+.todo-add-item{
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 30px;
+}
+
+.clear-todo-list{
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  position: absolute;
+  right: 10%;
+  top: 10%;
+  transform: translate(-50%, -50%);
+}
+
+.alert-dismissible{
+  position: absolute;
+}
+
+.delete-span{
+  position: relative;
+  top: 50%;
+  color: red;
+  float: right;
 }
